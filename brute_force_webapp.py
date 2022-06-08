@@ -67,7 +67,7 @@ def get_words(resume=None, wordlist=None):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser('Brute force and find all the files accessible on the given webserver.')
     parser.add_argument('-target', help='url to bruteforce', required=True)
-    parser.add_argument('-wordlist', help='wordlist for the files to check', default=Path(__file__).absolute().parent / 'all.txt', type=lambda p: Path(p).absolute())
+    parser.add_argument('-wordlist', help='wordlist for the files to check', default=Path(__file__).absolute().parent / 'resources' / 'all.txt', type=lambda p: Path(p).absolute())
     args = parser.parse_args()
 
     print('Prepping words...')
